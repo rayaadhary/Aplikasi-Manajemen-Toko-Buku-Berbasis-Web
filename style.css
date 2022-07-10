@@ -1,0 +1,28 @@
+.page-item.active .page-link {
+  z-index: 1;
+
+  color: #fff;
+
+  background-color: black;
+
+  border-color: #aeff5e;
+}
+
+.pagination > li > a {
+  background-color: white;
+  color: black;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: black;
+  background-color: #eee;
+  border-color: #ddd;
+}
+
+.pagination > .active > a:hover {
+  background-color: black;
+  border: solid 1px black;
+}
