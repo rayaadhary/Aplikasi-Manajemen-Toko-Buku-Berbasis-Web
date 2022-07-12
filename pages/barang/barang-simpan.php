@@ -42,8 +42,7 @@
 		<div class="col-2 mt-5 pt-3 bg-secondary">
 			<ul class="nav flex-column ml-3 mb-5">
 				<li class="nav-item">
-					<a class="nav-link text-dark" href="index.php">
-						<i class="fa fa-tachometer text-dark" style="font-size:24px; margin-right: 0.3em;" ></i>
+					<a class="nav-link text-dark" href="../../index-admin.php">
 						Dashboard</a>
 						<hr class="bg-light">
 					</li>
@@ -64,9 +63,13 @@
 				</li>	
 			<hr class="bg-light">  
 			<li class="nav-item">
-					<a class="nav-link text-dark" href="../pegawai/pegawai.php">Data Pembeli</a>
+					<a class="nav-link text-dark" href="../pegawai/pegawai.php">Data Pegawai</a>
 				</li>	
 			<hr class="bg-light">  
+			<li class="nav-item">
+					<a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#modalLogout">Keluar</a>
+				</li>	
+			<hr class="bg-light"> 
 			</ul>
 		</div>
 
@@ -184,6 +187,25 @@ if(isset($_POST["TblSimpan"])){
 		echo "Gagal koneksi".(DEVELOPMENT?" : ".$db->connect_error:"")."<br>";
 }
 ?>
+</div>
+<div class="modal fade" id="modalLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Keluar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	</div>
+	<div class="modal-body">
+		Apakah yakin ingin keluar?
+	</div>
+	<div class="modal-footer">
+		<form method="post" action="../../logout.php">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+		<button type="submit" name="TblKeluar" class="btn btn-danger">Yakin</button>
+		</form>
+	</div>
+</div>
+</div>
 </div>
 </body>
 </html>
